@@ -5,11 +5,9 @@ using Lora.Api.Services.Interfaces;
 using RestEase;
 
 var builder = WebApplication.CreateBuilder(args);
-var GH_TOKEN = builder.Configuration.GetValue<string>("GH_TOKEN");
-
 builder.Services.AddSingleton<IRepositoryService, RepositoryService>();
 builder.Services.AddSingleton(RestClient.For<IGithubClient>("https://api.github.com", async (request, cancelationToken) => {
-    await Task.Run(() => request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", GH_TOKEN));
+    await Task.Run(() => request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", builder.Configuration.GetValue<string>("GH_TOKEN")));
 }));
 
 // Add services to the container.
