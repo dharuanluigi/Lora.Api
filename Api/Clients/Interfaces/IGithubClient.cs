@@ -11,5 +11,5 @@ namespace Lora.Api.Clients.Interfaces;
 public interface IGithubClient
 {
     [Get("orgs/{organizationName}/repos?direction=asc")]
-    Task<IImmutableList<GithubClientResponse>> GetUserRepositoriesAsync([Path] string organizationName);
+    Task<Response<IImmutableList<GithubClientResponse>>> GetUserRepositoriesAsync([Path] string organizationName);
 }
