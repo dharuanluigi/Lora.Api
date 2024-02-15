@@ -44,12 +44,17 @@ public class RepositoryService : IRepositoryService
 
         var userRepositories = githubClientResponseWithRepositories.GetContent();
 
-        var lang = listGithubRepository.Language?.ToCapitalize();
+        if (userRepositories.Count == 0)
+        {
+            return ImmutableList<GithubRepositoryDataDTO>.Empty;
+        }
 
-        if (string.IsNullOrWhiteSpace(lang) is not true)
+        var filteredLanguage = listGithubRepository.Language?.ToCapitalize();
+
+        if (string.IsNullOrWhiteSpace(filteredLanguage) is not true)
         {
             var filteredByLanguageRepositories = userRepositories
-                                                .Where(r => r.Language == lang)
+                                                .Where(r => r.Language == filteredLanguage)
                                                 .Take(MAX_RESULTS)
                                                 .Select(r => new GithubRepositoryDataDTO(r.Owner.AvatarUrl, r.Name, r.Description));
 
