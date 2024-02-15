@@ -17,5 +17,5 @@ public interface IGithubClient
     /// <param name="organizationName">Organization username at github</param>
     /// <returns>Response with content and status code comes from github upstream api</returns>
     [Get("orgs/{organizationName}/repos?direction=asc")]
-    Task<Response<IImmutableList<GithubClientResponse>>> GetUserRepositoriesAsync([Path] string organizationName);
+    Task<Response<ImmutableList<GithubClientResponse>>> GetUserRepositoriesAsync([Path] string organizationName);
 }

@@ -14,5 +14,5 @@ public interface IRepositoryService
     /// </summary>
     /// <param name="listGithubRepository">Necessary record with required username and other filters if needed</param>
     /// <returns>An immutable list with founded repository with it data</returns>
-    Task<IImmutableList<GithubRepositoryDataDTO>> ListUserRepositoryAsync(ListUserGithubRepository listGithubRepository);
+    Task<ImmutableList<GithubRepositoryDataDTO>> ListUserRepositoryAsync(ListUserGithubRepository listGithubRepository);
 }

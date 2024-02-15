@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lora.Api", "Lora.Api.csproj", "{67A9B45D-E1A4-43EB-A7E4-20AABE603746}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Tests", "..\Api.Tests\Api.Tests.csproj", "{51B26DD4-1B2B-4D7F-B1D2-223D317AA584}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67A9B45D-E1A4-43EB-A7E4-20AABE603746}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67A9B45D-E1A4-43EB-A7E4-20AABE603746}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67A9B45D-E1A4-43EB-A7E4-20AABE603746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B26DD4-1B2B-4D7F-B1D2-223D317AA584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B26DD4-1B2B-4D7F-B1D2-223D317AA584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B26DD4-1B2B-4D7F-B1D2-223D317AA584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B26DD4-1B2B-4D7F-B1D2-223D317AA584}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
