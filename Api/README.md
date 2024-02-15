@@ -5,7 +5,7 @@ Nesse repositório contém os arquivos necessários para a entrega do desafio t�
 Dentro do repositório contém uma pasta chamada: `Api` e uma chamada `Flow`.
 
 1. `Api`: Contém todo o código fonte da api-gateway usada pelo contato inteligente.
-2. `Flow`: Contém o arquivo JSON do contato inteligente.
+2. `Flow`: Contém o arquivo JSON do contato inteligente. Caso queira testar em execução, basta acessar: [AQUI](https://dharuanluigi-9e4a8.chat.blip.ai/?appKey=dGFrZXZhbHVlczE6NzVlZTkzNTUtYWE3Yy00Y2NlLTgzYjUtYWNjNjQ1ZThlMmUy)
 
 ### Reprodução
 
