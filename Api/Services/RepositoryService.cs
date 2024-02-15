@@ -30,8 +30,8 @@ public class RepositoryService : IRepositoryService
     /// </summary>
     /// <param name="listGithubRepository">Model with necessary data to get information from upstream github api</param>
     /// <returns>List of all founded repositories</returns>
-    /// <exception cref="ArgumentNullException">If argument is not present</exception>
-    public async Task<IImmutableList<GithubRepositoryDataDTO>> ListUserRepositoryAsync(ListUserGithubRepository listGithubRepository)
+    /// <exception cref="ArgumentNullException">If argument is not present or invalid one was informed</exception>
+    public async Task<ImmutableList<GithubRepositoryDataDTO>> ListUserRepositoryAsync(ListUserGithubRepository listGithubRepository)
     {
         if (listGithubRepository is null)
         {
