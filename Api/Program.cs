@@ -1,4 +1,5 @@
 using System.Net.Http.Headers;
+using System.Reflection;
 using Lora.Api.Clients.Interfaces;
 using Lora.Api.Services;
 using Lora.Api.Services.Interfaces;
@@ -22,16 +23,16 @@ builder.Services.AddSwaggerGen(options => {
         Title = "Lora Smart Contact Endpoint",
         Description = "API-gateway for smart contact to delivery services into smart contact"
     });
+
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
