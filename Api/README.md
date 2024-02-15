@@ -19,7 +19,7 @@ Dentro do repositório contém uma pasta chamada: `Api` e uma chamada `Flow`.
 
 * API - Para acessar a documentação da API basta acessar: [AQUI](https://lora-api.fly.dev/swagger/index.html). Caso queira fazer o teste local, siga os passos:
     1. Clone o repositório como preferir;
-    2. Após clonar o repositório, dentro da pasta root do projeto: `/Api`, abra o terminal e digite o comando: `dotnet restore`. Para isso é necessário ter instalado o ***.NET 6.0 LTS***. Mais informações de como instalar: [AQUI](https://dotnet.microsoft.com/pt-br/download/dotnet/6.0);
+    2. Após clonar o repositório, dentro da pasta root do projeto: `/Api`, abra o terminal e digite o comando: `dotnet restore`. Para isso é necessário ter instalado o ***.NET SDK 6.0 LTS***. Mais informações de como instalar: [AQUI](https://dotnet.microsoft.com/pt-br/download/dotnet/6.0);
     3. Apos isso, será necessário criar seu token pessoal do Github, para conseguir fazer adequadamente as requisições para a APi do Github. Para isso siga essa documentação aqui: [Criando Personal Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
     4. Ao criar seu token pessoal, abra o arquivo na pasta root do projeto chamado: `appsettings.Development.json`, e substitua o valor de `${TOKEN_VALUE}` pelo valor do seu token pessoal do Github.
         * Obs: Em um cenário produtivo, ao invés de editar o arquivo `appsettings.Development.json`, faça a alteração em `appsettings.json` no momento de build com o valor desejado do token. Caso use Github actions existe a variável global com esse valor, chamada: `GITHUB_TOKEN`;
