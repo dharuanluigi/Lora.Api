@@ -19,6 +19,11 @@ public static class StringExtensions
     /// <returns>The same string transformed to capitalized one</returns>
     public static string ToCapitalize(this string s)
     {
+        if (string.IsNullOrWhiteSpace(s))
+        {
+            return string.Empty;
+        }
+        
         return char.ToUpper(s[FIRST_CHAR]) + s.ToLower().Substring(SECOND_CHAR, s.Length-FINAL_STRING);
     }
 }
