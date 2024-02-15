@@ -2,6 +2,7 @@ using System.Net.Http.Headers;
 using Lora.Api.Clients.Interfaces;
 using Lora.Api.Services;
 using Lora.Api.Services.Interfaces;
+using Microsoft.OpenApi.Models;
 using RestEase;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,14 @@ builder.Services.AddSingleton(RestClient.For<IGithubClient>("https://api.github.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options => {
+    options.SwaggerDoc("v1", new OpenApiInfo 
+    {
+        Version = "v1",
+        Title = "Lora Smart Contact Endpoint",
+        Description = "API-gateway for smart contact to delivery services into smart contact"
+    });
+});
 
 var app = builder.Build();
 
