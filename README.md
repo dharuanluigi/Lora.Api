@@ -4,7 +4,8 @@ Nesse repositório contém os arquivos necessários para a entrega do desafio t�
 ## Arquivos
 Dentro do repositório contém uma pasta chamada: `Api` e uma chamada `Flow`.
 
-1. `Api`: Contém todo o código fonte da api-gateway usada pelo contato inteligente.
+1. `Api`a: Contém todo o código fonte da api-gateway usada pelo contato inteligente.
+    * `Api.Tests`: É um projeto de testes para a api principal, localizada em `Api`
 2. `Flow`: Contém o arquivo JSON do contato inteligente. Caso queira testar em execução, basta acessar: [AQUI](https://dharuanluigi-9e4a8.chat.blip.ai/?appKey=dGFrZXZhbHVlczE6NzVlZTkzNTUtYWE3Yy00Y2NlLTgzYjUtYWNjNjQ1ZThlMmUy)
 
 ### Reprodução
@@ -25,3 +26,8 @@ Dentro do repositório contém uma pasta chamada: `Api` e uma chamada `Flow`.
         * Obs: Em um cenário produtivo, ao invés de editar o arquivo `appsettings.Development.json`, faça a alteração em `appsettings.json` no momento de build com o valor desejado do token. Caso use Github actions existe a variável global com esse valor, chamada: `GITHUB_TOKEN`;
     5. Após substituir o valor, execute o comando no terminal dentro da pasta root do projeto: `dotnet run`;
         * Obs: Informações de porta serão exibidas no console do app;
+
+### Melhorias
+- [ ] Adicionar cache, pelo contexto da requisição não mudar. Adicionando performance na requisição;
+- [ ] Adicionar um middleware customizado para respostas de erros, ao inves de utilizar respostas default do sistema;
+- [ ] Adicionar autenticação por token, ao invés de deixar aberta como atualmente.
